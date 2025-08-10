@@ -4,19 +4,19 @@ const songs = [
         title: "Dreaming",
         artist: "Cloud Nine",
         src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
-        cover: "images/dreaming.jpg" // Album art!
+        cover: "dreaming.jpg" // Album art!
     },
     {
         title: "Jazz Fusion",
         artist: "Open Area",
         src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
-        cover: "images/jazz.jpeg" // Album art!
+        cover: "jazz.jpeg" // Album art!
     },
     {
         title: "Chill Vibes",
         artist: "Whale Song",
         src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
-        cover: "images/chill.jpeg" // Album art!
+        cover: "chill.jpeg" // Album art!
     }
 ];
 
