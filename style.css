@@ -1,0 +1,122 @@
+body {
+    background: linear-gradient(120deg, #3A8EEE 0%, #7DD6FF 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.player-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 480px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px #0002;
+    padding: 20px;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#album-art {
+    width: 180px;
+    height: 180px;
+    border-radius: 16px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px #0001;
+    transition: transform 0.2s;
+}
+
+#album-art.playing {
+    animation: bounce 1s infinite alternate;
+}
+@keyframes bounce {
+    to { transform: scale(1.03); }
+}
+
+h2, h3 {
+    margin: 6px 0 2px 0;
+    text-align: center;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.controls button {
+    padding: 8px 14px;
+    font-size: 1.2em;
+    border: none;
+    background: #3A8EEE;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.controls button:hover {
+    background: #1856b8;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+    margin: 10px 0;
+}
+#seek {
+    flex: 1;
+    accent-color: #3A8EEE;
+}
+
+.volume-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+#volume {
+    flex: 1;
+    accent-color: #3A8EEE;
+}
+
+.playlist {
+    margin-top: 18px;
+    width: 100%;
+}
+.playlist ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.playlist li {
+    padding: 8px 14px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    transition: background 0.18s;
+}
+.playlist li.active, .playlist li:hover {
+    background: #f0f8ff;
+    font-weight: bold;
+}
+
+@media (max-width:600px) {
+    .player-container {
+        max-width: 95vw;
+        padding: 10px;
+    }
+    #album-art {
+        width: 120px;
+        height: 120px;
+    }
+}
